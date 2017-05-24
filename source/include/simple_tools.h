@@ -5,15 +5,32 @@
 #include <iomanip>
 #include <string>
 
-//using namespace std;
+using namespace std;
 
-void print_msg (std::string *text)
+void print_msg (string *text)
 {
-	std::cout << ">> " << *text << std::endl;
+	cout << ">> " << *text << endl;
+};
 
-	*text = "Hacked";
+string reverse_msg_and_return_as_string (string *text)
+{
+	string rev_str = "dummy";
 
-	std::cout << ">> " << *text << std::endl;
+	int msg_size = sizeof(*text);
+
+	if (msg_size <= 0) 
+	{
+		return ">> Empty string passed";
+	}
+
+	return rev_str;
+
+	// for (int i = 0; i < print_msg; ++i)
+	// {
+		
+	// }
+
+	// cout << ">> " << *text << endl;
 };
 
 #endif
