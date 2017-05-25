@@ -29,7 +29,7 @@ int main(void)
   std::string *ptr_msg = &pass_msg;
 
   if ( test0 ) { print_msg(ptr_msg);   };
-	// if ( test1 ) { print_msg(&pass_msg); };
+  else { std::string *ptr_msg = &fail_msg; print_msg(fail_msg); }
 
 	std::cout << pass_msg << std::endl;
 

@@ -31,11 +31,11 @@ void print_header (string *text, unsigned line_width)
 	if ( length <= line_width-4 ) 
 	{
 		cout << endl;
-		print_border('~', '+', line_width);
+		print_border('=', '+', line_width);
 		cout << "| " << *text;
 		print_padding(length, line_width);
 		cout << " |" << endl;
-		print_border('~', '+', line_width);
+		print_border('=', '+', line_width);
 		cout << endl;		
 	};
 };

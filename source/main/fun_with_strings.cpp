@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int main(void)
+void fun_with_strings(void)
 {
   string hdr = "Experiment";
   print_header(&hdr, 80);
@@ -71,5 +71,5 @@ int main(void)
   delete empty_ptr;
   delete full_msg;
 
-  return 0;
+  return;
 };
