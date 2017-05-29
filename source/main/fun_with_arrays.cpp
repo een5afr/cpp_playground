@@ -26,7 +26,7 @@ void fun_with_arrays(void)
 		if (i == size-1) { cout << endl; };
 	};
 
-	int i =  return_first_matched( array_ptr, "fun_with_num_x", size );
+	int i =  return_first_matched( array_ptr, "fun_with_num_2", size );
 
 	if ( i >= 0 ) { cout << "\nIndex = " << i << ", Address = " << (array_ptr+i) << ", Text = " << *(array_ptr+i) << endl; }
 	else		  { cout << "\nNot Found !!!" << endl; }; 

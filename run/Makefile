@@ -7,7 +7,7 @@ MAIN_DIR    = $(SOURCE_DIR)/main
 INCLUDE_DIR = $(SOURCE_DIR)/include
 
 run : all
-	./run -arrays
+	./run -strings
 
 all : main.o fun_with_arrays.o fun_with_strings.o
 	g++ main.o fun_with_arrays.o fun_with_strings.o -o run

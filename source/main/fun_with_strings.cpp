@@ -7,6 +7,7 @@ using namespace std;
 
 void fun_with_strings(void)
 {
+  /*
   string hdr = "Experiment";
   print_header(&hdr, 80);
 
@@ -70,6 +71,13 @@ void fun_with_strings(void)
   delete msg_hptr;
   delete empty_ptr;
   delete full_msg;
+  */
+
+  int Value;
+
+  string *txt = new string("This is the end of the world and you'd know it; on this day there\'ll be gnashing of the teeth. But what if I don\'t have any teeth? said the old lady. Teeth will be provided.");
+  
+  print_msgbox( txt, 50 );
 
   return;
 };
