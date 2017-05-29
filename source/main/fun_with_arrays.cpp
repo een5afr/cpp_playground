@@ -18,16 +18,13 @@ void fun_with_arrays(void)
 	{
 		cout << "i = " << i << ", &array_ptr[i] = " << &array_ptr[i] << " contains " << array_ptr[i] <<endl;
 		if (i == size-1) { cout << endl; };
-	}
+	};
 
 	for (int i = 0; i < size; i++)
 	{
 		cout << "i = " << i << ", (array_ptr+i) = " << (array_ptr+i) << " contains " << *(array_ptr+i) <<endl;
 		if (i == size-1) { cout << endl; };
-	}
-
-	//string copy = *duplicate_array( array_ptr, 10 );
-	//cout << "\nHead of array = " << copy << endl;
+	};
 
 	int i =  return_first_matched( array_ptr, "fun_with_num_x", size );
 
@@ -35,8 +32,8 @@ void fun_with_arrays(void)
 	else		  { cout << "\nNot Found !!!" << endl; }; 
 
 	string *copy_ptr = duplicate_array( array_ptr, 10 );
-
-	delete_array(array_ptr);
+	cout << endl;
+	string  copy_str = *duplicate_array( array_ptr, 10 );
 
 	return;
 };

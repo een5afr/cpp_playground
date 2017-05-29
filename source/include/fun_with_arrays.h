@@ -57,10 +57,4 @@ string *duplicate_array( const string *str_array, unsigned size )
 	return cpy_array;
 };
 
-string *delete_array ( string *str_array )
-{
-	cout << "Array at " << str_array << " deleted." << endl;
-	delete str_array;
-};
-
 #endif //__FUN_WITH_ARRAYS_H__
