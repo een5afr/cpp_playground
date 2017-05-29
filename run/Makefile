@@ -6,6 +6,9 @@ SOURCE_DIR  = ../source
 MAIN_DIR    = $(SOURCE_DIR)/main
 INCLUDE_DIR = $(SOURCE_DIR)/include
 
+run : all
+	./run -arrays
+
 all : main.o fun_with_arrays.o fun_with_strings.o
 	g++ main.o fun_with_arrays.o fun_with_strings.o -o run
 
@@ -19,4 +22,4 @@ fun_with_arrays.o: $(MAIN_DIR)/fun_with_arrays.cpp $(INCLUDE_DIR)/fun_with_array
 	g++ -c $(MAIN_DIR)/fun_with_arrays.cpp -I$(INCLUDE_DIR)
 
 clean:
-	rm -rf *.o *.out
+	rm -rf *.o *.out run

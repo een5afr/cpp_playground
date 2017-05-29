@@ -7,17 +7,36 @@ using namespace std;
 
 void fun_with_arrays(void)
 {
-	string *array_ptr = create_array_of_string( 10 );
+	unsigned size(10);
+	string *array_ptr = create_array_of_string( size );
 	
-	cout << "sizeof(array_ptr) returns size of pointer \t: "    << sizeof(array_ptr)  << endl;
-	cout << "sizeof(array_ptr) returns size of each entry \t: " << sizeof(*array_ptr) << endl;
+	cout << "\nsizeof(array_ptr) returns size of pointer \t: "  << sizeof(array_ptr)  << endl;
+	cout << "sizeof(*array_ptr) returns size of each entry \t: " << sizeof(*array_ptr) << endl;
+	cout << endl;
 
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < size; i++)
 	{
-		cout << "i = " << i <<" , Array at " << array_ptr << " containing " << *array_ptr << endl;
-		array_ptr++;
+		cout << "i = " << i << ", &array_ptr[i] = " << &array_ptr[i] << " contains " << array_ptr[i] <<endl;
+		if (i == size-1) { cout << endl; };
 	}
+
+	for (int i = 0; i < size; i++)
+	{
+		cout << "i = " << i << ", (array_ptr+i) = " << (array_ptr+i) << " contains " << *(array_ptr+i) <<endl;
+		if (i == size-1) { cout << endl; };
+	}
+
+	//string copy = *duplicate_array( array_ptr, 10 );
+	//cout << "\nHead of array = " << copy << endl;
+
+	int i =  return_first_matched( array_ptr, "fun_with_num_x", size );
+
+	if ( i >= 0 ) { cout << "\nIndex = " << i << ", Address = " << (array_ptr+i) << ", Text = " << *(array_ptr+i) << endl; }
+	else		  { cout << "\nNot Found !!!" << endl; }; 
+
+	string *copy_ptr = duplicate_array( array_ptr, 10 );
+
+	delete_array(array_ptr);
 
 	return;
 };
-

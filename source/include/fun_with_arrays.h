@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <sstream>  // Required for stringstreams
+#include <cstring>
 
 using namespace std;
 
@@ -27,21 +28,33 @@ string *create_array_of_string( unsigned size )
 	return str_array;
 };
 
-string *search_array_by_string( string pattern )
+int return_first_matched( const string *str_array, string pattern, unsigned size )
 {
+	for (int i = 0; i < size; i++)
+	{
+		if (*(str_array+i) == pattern) 
+		{
+			return i;
+		};
+	};
 
-
-
+	return -1;
 };
 
-string *search_array_by_index( unsigned index )
+string *duplicate_array( const string *str_array, unsigned size )
 {
+	string *cpy_array = new string[size];
 
-};
+	for (int i = 0; i < size; i++)
+	{
+		cout << "*str_array[" << i << "] = " << str_array[i] << " at addr = " << &(str_array[i]) << endl;
 
-string *duplicate_array(  )
-{
+		cpy_array[i] = str_array[i];
+		
+		cout << "*cpy_array[" << i << "] = " << str_array[i] << " at addr = " << &(cpy_array[i]) << endl;
+	};
 
+	return cpy_array;
 };
 
 string *delete_array ( string *str_array )
