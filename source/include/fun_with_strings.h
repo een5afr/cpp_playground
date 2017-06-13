@@ -72,7 +72,7 @@ void print_msgbox (string *text, unsigned line_width)
 		{
 			if ( col == 0 ) { cout << "| "; };
 
-			bool add_padding = row_last && (col == col_width); 
+			bool add_padding = row_last && (col >= col_width); 
 			bool ignore_char = temp_char[row*(line_width-4)+col] == '\0';
 
 			if ( add_padding || ignore_char ) 	{ cout << " "; }
